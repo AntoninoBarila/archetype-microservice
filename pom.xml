@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>it.antoninobarila</groupId>
+  <artifactId>microservice-project-archetype</artifactId>
+  <version>1.0.0</version>
+  <packaging>maven-archetype</packaging>
+
+  <name>MicroServiceProject Archetype</name>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>3.0.1</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>3.0.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <description>MicroServiceProject Archetype</description>
+
+  <url>https://projects.spring.io/spring-cloud/docprocessor</url>
+
+  <developers>
+    <developer>
+      <id>abarila</id>
+      <name>Antonino Barilà</name>
+      <email>antonino.barila@capgemini.com</email>
+      <organization>Capgemini Italia SPA</organization>
+      <roles>
+        <role>Project Leader</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/spring-projects/spring-boot/spring-boot-starter-parent/spring-cloud-starter-parent/docprocessor</url>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>repo.spring.io</id>
+      <name>Spring Release Repository</name>
+      <url>https://repo.spring.io/libs-release-local</url>
+    </repository>
+    <snapshotRepository>
+      <id>repo.spring.io</id>
+      <name>Spring Snapshot Repository</name>
+      <url>https://repo.spring.io/libs-snapshot-local</url>
+    </snapshotRepository>
+    <site>
+      <id>spring-docs</id>
+      <url>scp://static.springframework.org/var/www/domains/springframework.org/static/htdocs/spring-cloud/docs/spring-cloud-starter-parent/Camden.SR7</url>
+    </site>
+    <downloadUrl>https://github.com/spring-cloud</downloadUrl>
+  </distributionManagement>
+</project>

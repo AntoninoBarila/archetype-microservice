@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+	name="MicroService Project"
+	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fileSets>
+		<fileSet encoding="UTF-8">
+			<directory>config/backup</directory>
+			<includes>
+				<include>**/*.bkp</include>
+			</includes>
+		</fileSet>
+		<fileSet encoding="UTF-8">
+			<directory>config</directory>
+			<includes>
+				<include>**/*.yml</include>
+			</includes>
+		</fileSet>
+		<fileSet encoding="UTF-8">
+			<directory>.settings</directory>
+			<includes>
+				<include>**/*.prefs</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" encoding="UTF-8">
+			<directory></directory>
+			<includes>
+				<include>.project</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+	<modules>
+		<module id="business-service" dir="business-service"
+			name="business-service">
+			<fileSets>
+				<fileSet encoding="UTF-8">
+					<directory>.settings</directory>
+					<includes>
+						<include>**/*.prefs</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>.project</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+			<modules>
+				<module id="common-service-library" dir="common-service-library" name="common-service-library">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory>src/main/java</directory>
+							<includes>
+								<include>**/*.java</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory>.settings</directory>
+							<includes>
+								<include>**/*.xml</include>
+							</includes>
+						</fileSet>
+						<fileSet encoding="UTF-8">
+							<directory>.settings</directory>
+							<includes>
+								<include>**/*.prefs</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>.classpath</include>
+								<include>.project</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+			</modules>
+		</module>
+		<module id="system-service" dir="system-service" name="system-service">
+			<fileSets>
+				<fileSet encoding="UTF-8">
+					<directory>.settings</directory>
+					<includes>
+						<include>**/*.prefs</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>.project</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+			<modules>
+				<module id="discovery-service" dir="discovery-service"
+					name="discovery-service">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory>src/main/java</directory>
+							<includes>
+								<include>**/*.java</include>
+							</includes>
+						</fileSet>
+						<fileSet encoding="UTF-8">
+							<directory>src/main/resources</directory>
+							<includes>
+								<include>**/*.yml</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory>.settings</directory>
+							<includes>
+								<include>**/*.xml</include>
+							</includes>
+						</fileSet>
+						<fileSet encoding="UTF-8">
+							<directory>.settings</directory>
+							<includes>
+								<include>**/*.prefs</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>.classpath</include>
+								<include>.project</include>
+							</includes>
+						</fileSet>
+						<fileSet encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>.springBeans</include>
+								<include>Dockerfile</include>
+								<include>.gitignore</include>
+								<include>Jenkinsfile</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+				<module id="gateway-service" dir="gateway-service"
+					name="gateway-service">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory>src/main/java</directory>
+							<includes>
+								<include>**/*.java</include>
+							</includes>
+						</fileSet>
+						<fileSet encoding="UTF-8">
+							<directory>src/main/resources</directory>
+							<includes>
+								<include>**/*.yml</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory>.settings</directory>
+							<includes>
+								<include>**/*.xml</include>
+							</includes>
+						</fileSet>
+						<fileSet encoding="UTF-8">
+							<directory>.settings</directory>
+							<includes>
+								<include>**/*.prefs</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>.classpath</include>
+								<include>.project</include>
+							</includes>
+						</fileSet>
+						<fileSet encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>.springBeans</include>
+								<include>Dockerfile</include>
+								<include>.gitignore</include>
+								<include>Jenkinsfile</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+				<module id="zipkin-service" dir="zipkin-service" name="zipkin-service">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory>src/main/java</directory>
+							<includes>
+								<include>**/*.java</include>
+							</includes>
+						</fileSet>
+						<fileSet encoding="UTF-8">
+							<directory>src/main/resources</directory>
+							<includes>
+								<include>**/*.yml</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory>.settings</directory>
+							<includes>
+								<include>**/*.xml</include>
+							</includes>
+						</fileSet>
+						<fileSet encoding="UTF-8">
+							<directory>.settings</directory>
+							<includes>
+								<include>**/*.prefs</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>.classpath</include>
+								<include>.project</include>
+							</includes>
+						</fileSet>
+						<fileSet encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>.springBeans</include>
+								<include>.gitignore</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+				<module id="config-service" dir="config-service" name="config-service">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory>src/main/java</directory>
+							<includes>
+								<include>**/*.java</include>
+							</includes>
+						</fileSet>
+						<fileSet encoding="UTF-8">
+							<directory>src/main/resources</directory>
+							<includes>
+								<include>**/*.yml</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory>src/test/java</directory>
+							<includes>
+								<include>**/*.java</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory>.settings</directory>
+							<includes>
+								<include>**/*.xml</include>
+							</includes>
+						</fileSet>
+						<fileSet encoding="UTF-8">
+							<directory>.settings</directory>
+							<includes>
+								<include>**/*.prefs</include>
+							</includes>
+						</fileSet>
+						<fileSet filtered="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>.classpath</include>
+								<include>.project</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+			</modules>
+		</module>
+		<module id="presentation-service" dir="presentation-service"
+			name="presentation-service">
+			<fileSets>
+				<fileSet encoding="UTF-8">
+					<directory>.settings</directory>
+					<includes>
+						<include>**/*.prefs</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>.project</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+			<modules>
+				
+			</modules>
+		</module>
+	</modules>
+</archetype-descriptor>
